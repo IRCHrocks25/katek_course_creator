@@ -25,8 +25,12 @@ SECRET_KEY = 'django-insecure-ny6#&ti2z1llbn-xf=#5$8ao+98p6u*oxs#kya_mwkif09hjfj
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', 'katekcoursecreator-production.up.railway.app']
 
+CSRF_TRUSTED_ORIGINS = [
+    'http://localhost',
+    'https://katekcoursecreator-production.up.railway.app',
+]
 
 # Application definition
 
@@ -121,3 +125,4 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
